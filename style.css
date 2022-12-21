@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&family=Roboto&display=swap'); 
+
 :root {
   --primary-color: rgb(255, 92, 92);
   --primary-variant: #ff2d2d;
@@ -25,6 +27,7 @@ html {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   color: var(--on-background);
   background-color: var(--background);
   background-color: #ffffff;
@@ -41,17 +44,20 @@ section {
 }
 
 h1 {
+  font-family: "Great Vibes", cursive;
   font-size: 100px;
   margin-bottom: 0;
 }
 
 h2 {
+  color: var(--on-background-alt);
   font-size: 32px;
   font-weight: normal;
 }
 
 /* Navigation */
 nav {
+  font-family: "Open Sans", sans-serif;
   z-index: 10;
   position: fixed;
   font-size: 24px;
@@ -83,6 +89,8 @@ a:focus {
 /* About Section */
 .about-container {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .image-container {
@@ -252,4 +260,15 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .about-container {
+    justify-content: center;
+  }
+
+  .image-container {
+    margin-bottom: 3rem;
+  }
 }
